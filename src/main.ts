@@ -26,6 +26,7 @@ $(function () {
         for (let i = 0; i < sdarot.length; i++) {
             const tr = `
                 <tr>
+                debugger
                     <td>${sdarot[i].id}</td>
                     <td>${sdarot[i].name}</td>
                     <td>${sdarot[i].air_date}</td>
