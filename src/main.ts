@@ -1,8 +1,13 @@
 // <reference path="jquery-3.6.0.js" />
+
 "use strict";
+
 $(function () {
+
     $("#ajaxButton").click(() => {
+
         $("#loadingContainer").show();
+        
         $.ajax({
             url: "https://rickandmortyapi.com/api/episode",
             error: err => alert("Error: " + err.statusText),
@@ -11,9 +16,13 @@ $(function () {
                 displaySdarot(sdarot);
             }
         });
+
     });
-    function displaySdarot(sdarot) {
+
+    function displaySdarot(sdarot:any) {
+
         $("tbody").empty();
+
         for (let i = 0; i < sdarot.length; i++) {
             const tr = `
                 <tr>
@@ -22,7 +31,8 @@ $(function () {
                     <td>${sdarot[i].air_date}</td>
                     <td>${sdarot[i].episode}</td>
                 </tr>`;
+
             $("tbody").append(tr);
-        }
+        }      
     }
 });
