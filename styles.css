@@ -1,0 +1,12 @@
+table {
+    margin: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+#loadingContainer {
+    text-align: center;
+    display: none;
+}
