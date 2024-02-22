@@ -20,17 +20,17 @@ $(function () {
     });
 
     function displaySdarot(sdarot:any) {
-
         $("tbody").empty();
 
-        for (let i = 0; i < sdarot.length; i++) {
+        for (let i = 0; i < sdarot.results.length; i++) {
             const tr = `
                 <tr>
-                debugger
-                    <td>${sdarot[i].id}</td>
-                    <td>${sdarot[i].name}</td>
-                    <td>${sdarot[i].air_date}</td>
-                    <td>${sdarot[i].episode}</td>
+                    <td>${sdarot.results[i].id}</td>
+                    <td>${sdarot.results[i].name}</td>
+                    <td>${sdarot.results[i].air_date}</td>
+                    <td>${sdarot.results[i].episode}</td>
+                    <td>${sdarot.results[i].url}</td>
+                    <td>${sdarot.results[i].created}</td>
                 </tr>`;
 
             $("tbody").append(tr);
